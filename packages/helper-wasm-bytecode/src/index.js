@@ -348,6 +348,17 @@ const symbolsByByte = {
   0xfc_10: createSymbol("table.size", 1),
   0xfc_11: createSymbol("table.fill", 1),
 
+  // https://webassembly.github.io/spec/core/binary/instructions.html#numeric-instructions
+  // saturating truncation instructions
+  0xfc_00: createSymbol("i32.trunc_sat_f32_s"),
+  0xfc_01: createSymbol("i32.trunc_sat_f32_u"),
+  0xfc_02: createSymbol("i32.trunc_sat_f64_s"),
+  0xfc_03: createSymbol("i32.trunc_sat_f64_u"),
+  0xfc_04: createSymbol("i64.trunc_sat_f32_s"),
+  0xfc_05: createSymbol("i64.trunc_sat_f32_u"),
+  0xfc_06: createSymbol("i64.trunc_sat_f64_s"),
+  0xfc_07: createSymbol("i64.trunc_sat_f64_u"),
+
   // Atomic Memory Instructions
   0xfe00: createSymbol("memory.atomic.notify", 1),
   0xfe01: createSymbol("memory.atomic.wait32", 1),
